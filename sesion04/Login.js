@@ -10,7 +10,6 @@ const login = (userCredentials) => {
         for (let i = 0; i < users.length; i++) {
             if (userCredentials.email === users[0].email){
                 if(userCredentials.password === users[0].password) {
-                    console.log('Token generado: ',getToken(userCredentials))
                     return "Bienvenido al sistema";
                 }
                 if(userCredentials.password !== users[0].password){

@@ -44,6 +44,18 @@ const testReturnsUserNotFoundMessageWhenUserLogsInWithValidEmailAndPassword = ()
     executeTest(userCredentials, successMessage, makePostApiCall)
 }
 
+//Prueba de bloqueo
+const testReturnsLoginBlockedWhenUserLogsInWithValidEmailAndPassword = () => {
+    const userCredentials = {email: "unregistered_user@mail.com", password: "insecurePassword"}
+    const successMessage = "Login bloqueado"
+    //Tercer intento inválido. Usuario no registrado
+    executeTest(userCredentials, "Usuario no registrado", makePostApiCall)
+    //Cuarto intento. Se bloquea el acceso.
+    executeTest(userCredentials, successMessage, makePostApiCall)
+}
+
+
+
 //Prueba token válido 
 const testReturnsValidToken = () => {
     const userCredentials = {email: "myemail@mail.com", password: "securePassword"}
@@ -77,3 +89,6 @@ testReturnsUserNotFoundMessageWhenUserLogsInWithValidEmailAndPassword()
 testReturnsValidToken()
 testReturnsInvalidToken()
 //testDecypherToken()
+
+testReturnsLoginBlockedWhenUserLogsInWithValidEmailAndPassword()
+
