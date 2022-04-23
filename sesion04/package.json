@@ -1,0 +1,19 @@
+{
+  "name": "sesion04",
+  "version": "1.0.0",
+  "main": "Login.js",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
