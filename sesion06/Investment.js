@@ -37,8 +37,8 @@ class Investment {
     }
 
     static calculateTaxes(finalAmount){
-        //console.log(finalAmount * 0.92)
-        return finalAmount * 0.92;
+        const taxes = finalAmount * 0.08;
+        return finalAmount-taxes;
         /*
         const cuotaFija = 0;
         const porcentajeExcedente = 0;
