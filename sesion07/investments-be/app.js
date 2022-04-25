@@ -37,25 +37,6 @@ app.get('/returnDBValues', (req, res) => {
 })
 
 app.get('/getDetails',(req,res) => {
-    const repository = new InvestmentRepository();
-    const inv = repository.getInvestmentFromDB(req.query.id);
-    
-    const investmentData = {
-        name: inv.name,
-        description: inv.description,
-        interest: inv.interest,
-        startingAmount: inv.startingAmount,
-        startDate: new Date(inv.startDate),
-        duration: inv.duration,
-    };
-    
-    console.log('test getDetails', investmentData);
-    const investment = Investment.addInvestment(investmentData.name, investmentData.description, investmentData.interest, investmentData.startingAmount, investmentData.startDate, investmentData.duration, repository);
-
-    res.send(investment);
-})
-
-/*app.get('/getDetails',(req,res) => {
 
     const investmentData = {
         name: "cetes 28 days",
@@ -71,5 +52,5 @@ app.get('/getDetails',(req,res) => {
 
     res.send(investment);
 })
-*/
+
 module.exports = app;
