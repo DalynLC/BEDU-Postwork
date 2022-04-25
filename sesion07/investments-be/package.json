@@ -1,0 +1,23 @@
+{
+  "name": "investments-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Investment.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "sqlite3": "^5.0.5",
+    "supertest": "^6.2.2",
+    "uuid": "^8.3.2"
+  }
+}
