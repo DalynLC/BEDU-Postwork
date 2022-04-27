@@ -32,10 +32,10 @@ Sigue estas instrucciones:
 1. Repite los pasos anteriores ahora para la función castSnakeCaseToCamelCase
 
 ### CÓDIGO
-´´´javascript
+```javascript
 StringOperations.js
-´´´
-´´´javascript
+```
+``` javascript
 
 //Pascal - Camel
 const castPascalCaseToCamelCase = (pascalCaseString) => {
@@ -55,12 +55,12 @@ const castCamelCaseToSnakeCase = (camelCaseString) => {
     const pascalCase = castCamelCaseToPascalCase(camelCaseString);
     return castPascalCaseToSnakeCase(pascalCase);
 }
-´´´
+```
 
-´´´javascript
+```javascript
 TestStringOperations.js
-´´´
-´´´javascript
+```
+```javascript
 
 /const testCastPascalCaseToCamelCase = () => {
     console.log("\nPascal to Camel Test");
@@ -93,17 +93,17 @@ const testCastCamelCaseToPascalCase = () => {
     // Caso de prueba que falla
     executeTest("a_otro_ejemplo", "AOtroEjemplo", castCamelCaseToPascalCase);
 }
-´´´
+```
 
 ### Reflexiones finales 
 
 Una vez que hayas terminado  la actividad responde las siguientes preguntas:
 
-¿Cómo elegiste los casos de prueba para validar el correcto funcionamiento del sistema?
+- __¿Cómo elegiste los casos de prueba para validar el correcto funcionamiento del sistema?__
 Seleccioné dos casos de prueba con distintas características que debían dar el resultado esperado y una con un caso inesperado que produjera un error, esto con la intención de asegurarme que donde debía fallar fallara, y donde no, hiciera lo esperado.
-¿Después de concluir el reto refactorizaste el código? ¿Qué cambios realizaste?
+- __¿Después de concluir el reto refactorizaste el código? ¿Qué cambios realizaste?__
 Sí, después de concluir el reto y correr el primer set de pruebas agregué líneas de código que hicieran más fácil leer los resultados y comparar las entradas con las salidas.
-¿Utilizaste un método común o múltiples métodos individuales? ¿Por qué?
+- __¿Utilizaste un método común o múltiples métodos individuales? ¿Por qué?__
 Realicé métodos individuales para cada tipo de conversión, test y un método genérico para mostrar resultados con el fin de hacer el código más legible y que las modificaciones afectaran individualmente cada parte. 
 
 
